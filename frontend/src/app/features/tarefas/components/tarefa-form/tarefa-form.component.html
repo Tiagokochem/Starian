@@ -1,0 +1,23 @@
+<div class="tarefa-form">
+  <label class="tarefa-form__label" for="nova-tarefa">Nova tarefa</label>
+  <div class="tarefa-form__row">
+    <input
+      id="nova-tarefa"
+      type="text"
+      class="tarefa-form__input"
+      [(ngModel)]="titulo"
+      placeholder="Digite uma nova tarefa"
+      [disabled]="disabled"
+      (keyup.enter)="enviar()"
+      autocomplete="off"
+    />
+    <button
+      type="button"
+      class="tarefa-form__submit"
+      (click)="enviar()"
+      [disabled]="disabled || !titulo.trim()"
+    >
+      Adicionar
+    </button>
+  </div>
+</div>

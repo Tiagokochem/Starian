@@ -1,0 +1,65 @@
+.tarefas-page {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2.5rem;
+
+  &__header {
+    margin-bottom: 1.5rem;
+
+    h1 {
+      margin: 0 0 0.35rem;
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      color: #111827;
+    }
+
+    p {
+      margin: 0;
+      color: #4b5563;
+    }
+  }
+
+  &__subtitle {
+    margin: 0 0 0.75rem;
+    font-size: 1.125rem;
+    color: #1f2937;
+  }
+
+  &__status {
+    color: #4b5563;
+  }
+
+  &__alert {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    padding: 0.875rem 1rem;
+    border-radius: 0.5rem;
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+
+    button {
+      padding: 0.5rem 0.875rem;
+      border: 1px solid #991b1b;
+      border-radius: 0.375rem;
+      background: transparent;
+      color: #991b1b;
+      font-weight: 600;
+      cursor: pointer;
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .tarefas-page {
+    padding: 2.5rem 1.5rem;
+  }
+}

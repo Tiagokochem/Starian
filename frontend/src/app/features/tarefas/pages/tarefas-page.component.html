@@ -1,0 +1,29 @@
+<section class="tarefas-page">
+  <header class="tarefas-page__header">
+    <h1>Tarefas</h1>
+    <p>Gerencie suas tarefas de forma simples e organizada.</p>
+  </header>
+
+  @if (errorMessage) {
+    <div class="tarefas-page__alert" role="alert">
+      <span>{{ errorMessage }}</span>
+      <button type="button" (click)="carregar()" [disabled]="busy">
+        Tentar novamente
+      </button>
+    </div>
+  }
+
+  <app-tarefa-form [disabled]="busy" (criar)="criar($event)" />
+
+  @if (loading) {
+    <p class="tarefas-page__status" aria-live="polite">Carregando tarefas...</p>
+  } @else {
+    <h2 class="tarefas-page__subtitle">Lista</h2>
+    <app-tarefa-lista
+      [tarefas]="tarefas"
+      [busy]="busy"
+      (remover)="remover($event)"
+      (alternar)="alternar($event)"
+    />
+  }
+</section>

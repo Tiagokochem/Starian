@@ -1,0 +1,57 @@
+.tarefa-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background: #fff;
+
+  &__check {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    flex: 1 1 12rem;
+    min-width: 0;
+    cursor: pointer;
+
+    input {
+      margin-top: 0.2rem;
+      flex-shrink: 0;
+    }
+  }
+
+  &__title--done {
+    text-decoration: line-through;
+    color: #6b7280;
+  }
+
+  &__remove {
+    flex: 0 0 auto;
+    padding: 0.5rem 0.875rem;
+    border: none;
+    border-radius: 0.375rem;
+    background: #dc2626;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover:not(:disabled) {
+      background: #b91c1c;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .tarefa-item__remove {
+    width: 100%;
+  }
+}

@@ -1,0 +1,14 @@
+@if (tarefas.length === 0) {
+  <p class="tarefa-lista__empty">Nenhuma tarefa encontrada.</p>
+} @else {
+  <ul class="tarefa-lista">
+    @for (tarefa of tarefas; track tarefa.id) {
+      <app-tarefa-item
+        [tarefa]="tarefa"
+        [busy]="busy"
+        (remover)="remover.emit($event)"
+        (alternar)="alternar.emit($event)"
+      />
+    }
+  </ul>
+}

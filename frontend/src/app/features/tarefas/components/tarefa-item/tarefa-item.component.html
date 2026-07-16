@@ -1,0 +1,23 @@
+<li class="tarefa-item" [class.tarefa-item--completed]="tarefa.completed">
+  <label class="tarefa-item__check">
+    <input
+      type="checkbox"
+      [checked]="tarefa.completed"
+      [disabled]="busy"
+      (change)="onAlternar()"
+      [attr.aria-label]="'Marcar tarefa ' + tarefa.title"
+    />
+    <span [class.tarefa-item__title--done]="tarefa.completed">
+      {{ tarefa.title }}
+    </span>
+  </label>
+
+  <button
+    type="button"
+    class="tarefa-item__remove"
+    (click)="onRemover()"
+    [disabled]="busy"
+  >
+    Remover
+  </button>
+</li>
