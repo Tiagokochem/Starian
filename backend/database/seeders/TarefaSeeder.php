@@ -9,7 +9,9 @@ class TarefaSeeder extends Seeder
 {
     public function run(): void
     {
-        Tarefa::query()->delete();
+        if (Tarefa::query()->exists()) {
+            return;
+        }
 
         Tarefa::insert([
             [
