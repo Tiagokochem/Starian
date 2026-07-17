@@ -31,21 +31,21 @@ As decisões técnicas, validações e ajustes finais foram conduzidos com foco 
 | Dependência | Versão |
 |-------------|--------|
 | PHP | `8.3` |
-| Laravel Framework | `^11.31` declarado; `v11.45.1` no lock |
-| PHPUnit | `^11.0.1` |
-| Laravel Pint | `^1.13` |
+| Laravel Framework | `11.45.1` |
+| PHPUnit | `11.5.27` |
+| Laravel Pint | `1.24.0` |
 | Banco | SQLite com `pdo_sqlite` |
 
 ### Frontend
 
 | Dependência | Versão |
 |-------------|--------|
-| Angular | `17.3.x` (`@angular/core` resolvido em `17.3.12`) |
-| Angular CLI | `^17.3.17` |
-| TypeScript | `~5.4.2` |
-| RxJS | `~7.8.0` (`7.8.1` no lock) |
-| Zone.js | `~0.14.3` |
-| Test runner | Karma + Jasmine + Chrome Headless |
+| Angular | `17.3.12` |
+| Angular CLI | `17.3.17` |
+| TypeScript | `5.4.5` |
+| RxJS | `7.8.2` |
+| Zone.js | `0.14.10` |
+| Test runner | Karma `6.4.4` + Jasmine `5.1.2` + Chrome Headless |
 
 ## Como rodar
 
