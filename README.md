@@ -30,7 +30,7 @@ As decisões técnicas, validações e ajustes finais foram conduzidos com foco 
 
 | Dependência | Versão |
 |-------------|--------|
-| PHP | `^8.2` no projeto; container com PHP `8.3` |
+| PHP | `8.3` |
 | Laravel Framework | `^11.31` declarado; `v11.45.1` no lock |
 | PHPUnit | `^11.0.1` |
 | Laravel Pint | `^1.13` |
